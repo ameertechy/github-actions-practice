@@ -1,0 +1,31 @@
+name: Multi-OS Info
+
+on: [push]
+
+jobs:
+  ubuntu-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print OS info
+        run: |
+          echo "OS: ${{ runner.os }}"
+          hostname
+          whoami
+
+  windows-info:
+    runs-on: windows-latest
+    steps:
+      - name: Print OS info
+        run: |
+          echo "OS: ${{ runner.os }}"
+          hostname
+          whoami
+
+  macos-info:
+    runs-on: macos-latest
+    steps:
+      - name: Print OS info
+        run: |
+          echo "OS: ${{ runner.os }}"
+          hostname
+          whoami

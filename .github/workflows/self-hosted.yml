@@ -13,7 +13,8 @@ jobs:
         run: pwd
 
       - name: Create a proof file
-        run: echo "Run #${{ github.run_number }} on $(date)" >> /tmp/actions-proof.txt
+        run: |
+          echo "Run #${{ github.run_number }} on $(date)" >> /tmp/actions-proof.txt
 
       - name: Print it back
         run: cat /tmp/actions-proof.txt

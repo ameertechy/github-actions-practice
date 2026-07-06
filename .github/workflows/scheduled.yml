@@ -3,4 +3,9 @@ name: Daily Health Check
 on:
   schedule:
     - cron: '0 0 * * *'
-    
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Daily check
+        run: echo "Daily run at $(date)"

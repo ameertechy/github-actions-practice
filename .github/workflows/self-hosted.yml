@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   on-my-machine:
-    runs-on: self-hosted
+    runs-on: [self-hosted, linux, my-linux-runner]
     steps:
       - name: Print hostname
         run: hostname

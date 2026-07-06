@@ -1,0 +1,15 @@
+name: Pre-installed Tools
+
+on: [push]
+
+jobs:
+  tool-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check installed tools
+        run: |
+          echo "=== Docker ===" && docker --version
+          echo "=== Python ===" && python3 --version
+          echo "=== Node ===" && node --version
+          echo "=== Git ===" && git --version
+          echo "=== Go ===" && go version

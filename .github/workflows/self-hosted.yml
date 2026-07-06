@@ -1,0 +1,19 @@
+name: Self-Hosted Demo
+
+on: [push]
+
+jobs:
+  on-my-machine:
+    runs-on: self-hosted
+    steps:
+      - name: Print hostname
+        run: hostname
+
+      - name: Print working directory
+        run: pwd
+
+      - name: Create a proof file
+        run: echo "Run #${{ github.run_number }} on $(date)" >> /tmp/actions-proof.txt
+
+      - name: Print it back
+        run: cat /tmp/actions-proof.txt
